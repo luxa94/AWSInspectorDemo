@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		628C319E003BEA54A8931664 /* Pods_AWSInspectorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */; };
+		F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25311EEF3094001E1628 /* AppDelegate.swift */; };
+		F2CA25341EEF3094001E1628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25331EEF3094001E1628 /* ViewController.swift */; };
+		F2CA25371EEF3094001E1628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25351EEF3094001E1628 /* Main.storyboard */; };
+		F2CA25391EEF3094001E1628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25381EEF3094001E1628 /* Assets.xcassets */; };
+		F2CA253C1EEF3094001E1628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA253A1EEF3094001E1628 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11389F0F3C3B84720960E982 /* Pods-AWSInspectorDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSInspectorDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AWSInspectorDemo/Pods-AWSInspectorDemo.release.xcconfig"; sourceTree = "<group>"; };
+		311B6BA969122E802E8311FB /* Pods-AWSInspectorDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSInspectorDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AWSInspectorDemo/Pods-AWSInspectorDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSInspectorDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSInspectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CA25311EEF3094001E1628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2CA25331EEF3094001E1628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2CA25361EEF3094001E1628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2CA25381EEF3094001E1628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2CA253B1EEF3094001E1628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2CA253D1EEF3094001E1628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2CA252B1EEF3094001E1628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628C319E003BEA54A8931664 /* Pods_AWSInspectorDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B3FA29C6942842903AA043E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				311B6BA969122E802E8311FB /* Pods-AWSInspectorDemo.debug.xcconfig */,
+				11389F0F3C3B84720960E982 /* Pods-AWSInspectorDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B16DD8948F9A82684DB9063C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2CA25251EEF3094001E1628 = {
+			isa = PBXGroup;
+			children = (
+				F2CA25301EEF3094001E1628 /* AWSInspectorDemo */,
+				F2CA252F1EEF3094001E1628 /* Products */,
+				6B3FA29C6942842903AA043E /* Pods */,
+				B16DD8948F9A82684DB9063C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F2CA252F1EEF3094001E1628 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2CA25301EEF3094001E1628 /* AWSInspectorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F2CA25311EEF3094001E1628 /* AppDelegate.swift */,
+				F2CA25331EEF3094001E1628 /* ViewController.swift */,
+				F2CA25351EEF3094001E1628 /* Main.storyboard */,
+				F2CA25381EEF3094001E1628 /* Assets.xcassets */,
+				F2CA253A1EEF3094001E1628 /* LaunchScreen.storyboard */,
+				F2CA253D1EEF3094001E1628 /* Info.plist */,
+			);
+			path = AWSInspectorDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2CA252D1EEF3094001E1628 /* AWSInspectorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2CA25401EEF3094001E1628 /* Build configuration list for PBXNativeTarget "AWSInspectorDemo" */;
+			buildPhases = (
+				258A7643C830502C46C7C388 /* [CP] Check Pods Manifest.lock */,
+				F2CA252A1EEF3094001E1628 /* Sources */,
+				F2CA252B1EEF3094001E1628 /* Frameworks */,
+				F2CA252C1EEF3094001E1628 /* Resources */,
+				946189EF99B0D013654BA9A6 /* [CP] Embed Pods Frameworks */,
+				74D9C07697312B860B1AD536 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AWSInspectorDemo;
+			productName = AWSInspectorDemo;
+			productReference = F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2CA25261EEF3094001E1628 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Nikola Lukic";
+				TargetAttributes = {
+					F2CA252D1EEF3094001E1628 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 9K97J9E9KK;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F2CA25291EEF3094001E1628 /* Build configuration list for PBXProject "AWSInspectorDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2CA25251EEF3094001E1628;
+			productRefGroup = F2CA252F1EEF3094001E1628 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2CA252D1EEF3094001E1628 /* AWSInspectorDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2CA252C1EEF3094001E1628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2CA253C1EEF3094001E1628 /* LaunchScreen.storyboard in Resources */,
+				F2CA25391EEF3094001E1628 /* Assets.xcassets in Resources */,
+				F2CA25371EEF3094001E1628 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		258A7643C830502C46C7C388 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74D9C07697312B860B1AD536 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AWSInspectorDemo/Pods-AWSInspectorDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		946189EF99B0D013654BA9A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AWSInspectorDemo/Pods-AWSInspectorDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2CA252A1EEF3094001E1628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2CA25341EEF3094001E1628 /* ViewController.swift in Sources */,
+				F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2CA25351EEF3094001E1628 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2CA25361EEF3094001E1628 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2CA253A1EEF3094001E1628 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2CA253B1EEF3094001E1628 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2CA253E1EEF3094001E1628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2CA253F1EEF3094001E1628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2CA25411EEF3094001E1628 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 311B6BA969122E802E8311FB /* Pods-AWSInspectorDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9K97J9E9KK;
+				INFOPLIST_FILE = AWSInspectorDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxa.faks.AWSInspectorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F2CA25421EEF3094001E1628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11389F0F3C3B84720960E982 /* Pods-AWSInspectorDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9K97J9E9KK;
+				INFOPLIST_FILE = AWSInspectorDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxa.faks.AWSInspectorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2CA25291EEF3094001E1628 /* Build configuration list for PBXProject "AWSInspectorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2CA253E1EEF3094001E1628 /* Debug */,
+				F2CA253F1EEF3094001E1628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2CA25401EEF3094001E1628 /* Build configuration list for PBXNativeTarget "AWSInspectorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2CA25411EEF3094001E1628 /* Debug */,
+				F2CA25421EEF3094001E1628 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2CA25261EEF3094001E1628 /* Project object */;
+}
