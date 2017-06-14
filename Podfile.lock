@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - AWSAutoScaling (2.5.0):
     - AWSCore (= 2.5.0)
   - AWSCloudWatch (2.5.0):
@@ -36,6 +37,7 @@ PODS:
     - AWSCore (= 2.5.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - AWSAutoScaling
   - AWSCloudWatch
   - AWSCognito
@@ -55,6 +57,7 @@ DEPENDENCIES:
   - AWSSQS
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AWSAutoScaling: e5b14aaeb0f8d1c0289141b8ddd3f3b390bea6d1
   AWSCloudWatch: 03375fa007a3490d915b52cc68e993e0370bd666
   AWSCognito: 5a1af0c4b351de1ec8d523d3ed0aecce42dd630e
@@ -74,6 +77,6 @@ SPEC CHECKSUMS:
   AWSSNS: b2e3f080fa826e7ff2bcd52cb050c1592c439090
   AWSSQS: 93394a8dbac61edabc842aa0c185dccb0bada6b6
 
-PODFILE CHECKSUM: 78dabd5118c270cd8b2081bfeac2200ae58baf91
+PODFILE CHECKSUM: 04155b27ad26e5900a066b96f05d2f0d8b560d8a
 
 COCOAPODS: 1.2.0

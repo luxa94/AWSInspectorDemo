@@ -1,0 +1,15 @@
+//
+//  AwsUtil.swift
+//  AWSInspectorDemo
+//
+//  Created by Nikola Lukic on 6/15/17.
+//  Copyright © 2017 Nikola Lukic. All rights reserved.
+//
+
+import Foundation
+
+class AwsUtil {
+    static let service = "inspector"
+    static let region = "us-west-2"
+    static let endpoint = "https://inspector.us-west-2.amazonaws.com"
+}
