@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C70D6A5A8431B099BB7DD16 /* RequestProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C70D96F99628C1C8D57B097 /* RequestProcessor.swift */; };
 		628C319E003BEA54A8931664 /* Pods_AWSInspectorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */; };
 		F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25311EEF3094001E1628 /* AppDelegate.swift */; };
 		F2CA25341EEF3094001E1628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25331EEF3094001E1628 /* ViewController.swift */; };
@@ -16,11 +17,12 @@
 		F2E770531EF1E4520070B438 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770521EF1E4520070B438 /* Credentials.swift */; };
 		F2E770551EF1E8010070B438 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770541EF1E8010070B438 /* DateFormat.swift */; };
 		F2E770571EF1ED920070B438 /* AwsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770561EF1ED920070B438 /* AwsUtil.swift */; };
-		F2E770591EF1F28A0070B438 /* SigningUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770581EF1F28A0070B438 /* SigningUtil.swift */; };
+		F2E770591EF1F28A0070B438 /* AWSV4Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11389F0F3C3B84720960E982 /* Pods-AWSInspectorDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSInspectorDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AWSInspectorDemo/Pods-AWSInspectorDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2C70D96F99628C1C8D57B097 /* RequestProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestProcessor.swift; sourceTree = "<group>"; };
 		311B6BA969122E802E8311FB /* Pods-AWSInspectorDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSInspectorDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AWSInspectorDemo/Pods-AWSInspectorDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSInspectorDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSInspectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +35,7 @@
 		F2E770521EF1E4520070B438 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		F2E770541EF1E8010070B438 /* DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		F2E770561EF1ED920070B438 /* AwsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwsUtil.swift; sourceTree = "<group>"; };
-		F2E770581EF1F28A0070B438 /* SigningUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningUtil.swift; sourceTree = "<group>"; };
+		F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSV4Signer.swift; sourceTree = "<group>"; };
 		F2E7705A1EF1F4D20070B438 /* AWSInspectorDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AWSInspectorDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +107,8 @@
 				F2E770521EF1E4520070B438 /* Credentials.swift */,
 				F2E770541EF1E8010070B438 /* DateFormat.swift */,
 				F2E770561EF1ED920070B438 /* AwsUtil.swift */,
-				F2E770581EF1F28A0070B438 /* SigningUtil.swift */,
+				F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */,
+				2C70D96F99628C1C8D57B097 /* RequestProcessor.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -235,11 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E770531EF1E4520070B438 /* Credentials.swift in Sources */,
-				F2E770591EF1F28A0070B438 /* SigningUtil.swift in Sources */,
+				F2E770591EF1F28A0070B438 /* AWSV4Signer.swift in Sources */,
 				F2CA25341EEF3094001E1628 /* ViewController.swift in Sources */,
 				F2E770571EF1ED920070B438 /* AwsUtil.swift in Sources */,
 				F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */,
 				F2E770551EF1E8010070B438 /* DateFormat.swift in Sources */,
+				2C70D6A5A8431B099BB7DD16 /* RequestProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

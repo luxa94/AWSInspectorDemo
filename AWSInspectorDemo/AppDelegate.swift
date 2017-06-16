@@ -8,9 +8,6 @@
 
 import UIKit
 import Foundation
-import AWSCore
-import Security
-import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

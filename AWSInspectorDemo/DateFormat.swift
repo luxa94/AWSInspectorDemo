@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias DateTuple = (amazonTimestamp: String, clientDate: String)
+
 class DateFormat {
 
     let dateFormatter = DateFormatter()

@@ -1,3 +1,5 @@
 Pods/
 AWSInspectorDemo/Credentials.swift
+.idea/
+AWSInspectorDemo.xcworkspace/
 
