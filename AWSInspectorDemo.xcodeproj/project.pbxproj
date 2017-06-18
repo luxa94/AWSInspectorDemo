@@ -10,12 +10,21 @@
 		2C70D6A5A8431B099BB7DD16 /* RequestProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C70D96F99628C1C8D57B097 /* RequestProcessor.swift */; };
 		628C319E003BEA54A8931664 /* Pods_AWSInspectorDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */; };
 		F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25311EEF3094001E1628 /* AppDelegate.swift */; };
-		F2CA25341EEF3094001E1628 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25331EEF3094001E1628 /* ViewController.swift */; };
 		F2CA25371EEF3094001E1628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25351EEF3094001E1628 /* Main.storyboard */; };
 		F2CA25391EEF3094001E1628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25381EEF3094001E1628 /* Assets.xcassets */; };
 		F2CA253C1EEF3094001E1628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA253A1EEF3094001E1628 /* LaunchScreen.storyboard */; };
+		F2DB5D501EF547A8001F4D29 /* Arns.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D4F1EF547A8001F4D29 /* Arns.swift */; };
+		F2DB5D521EF54A19001F4D29 /* JSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D511EF54A19001F4D29 /* JSONUtil.swift */; };
+		F2DB5D541EF6BE72001F4D29 /* AssessmentTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D531EF6BE72001F4D29 /* AssessmentTemplate.swift */; };
+		F2DB5D561EF6C3C5001F4D29 /* UserAttributeForFindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D551EF6C3C5001F4D29 /* UserAttributeForFindings.swift */; };
+		F2DB5D581EF6C9F4001F4D29 /* AssessmentRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D571EF6C9F4001F4D29 /* AssessmentRun.swift */; };
+		F2DB5D5A1EF6CC97001F4D29 /* AssessmentRunNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D591EF6CC97001F4D29 /* AssessmentRunNotification.swift */; };
+		F2DB5D5D1EF6D452001F4D29 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D5C1EF6D452001F4D29 /* MainTableViewController.swift */; };
+		F2DB5D5F1EF6D5D1001F4D29 /* IndicatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D5E1EF6D5D1001F4D29 /* IndicatorTableViewController.swift */; };
+		F2DB5D611EF6D669001F4D29 /* TemplatesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D601EF6D669001F4D29 /* TemplatesListTableViewController.swift */; };
+		F2DB5D651EF6DEB1001F4D29 /* RunsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB5D641EF6DEB1001F4D29 /* RunsListTableViewController.swift */; };
 		F2E770531EF1E4520070B438 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770521EF1E4520070B438 /* Credentials.swift */; };
-		F2E770551EF1E8010070B438 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770541EF1E8010070B438 /* DateFormat.swift */; };
+		F2E770551EF1E8010070B438 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770541EF1E8010070B438 /* DateUtil.swift */; };
 		F2E770571EF1ED920070B438 /* AwsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770561EF1ED920070B438 /* AwsUtil.swift */; };
 		F2E770591EF1F28A0070B438 /* AWSV4Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */; };
 /* End PBXBuildFile section */
@@ -27,13 +36,22 @@
 		C5E4C371A5ACC730657A4CE8 /* Pods_AWSInspectorDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSInspectorDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSInspectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CA25311EEF3094001E1628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2CA25331EEF3094001E1628 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F2CA25361EEF3094001E1628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2CA25381EEF3094001E1628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2CA253B1EEF3094001E1628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2CA253D1EEF3094001E1628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2DB5D4F1EF547A8001F4D29 /* Arns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arns.swift; sourceTree = "<group>"; };
+		F2DB5D511EF54A19001F4D29 /* JSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtil.swift; sourceTree = "<group>"; };
+		F2DB5D531EF6BE72001F4D29 /* AssessmentTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentTemplate.swift; sourceTree = "<group>"; };
+		F2DB5D551EF6C3C5001F4D29 /* UserAttributeForFindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAttributeForFindings.swift; sourceTree = "<group>"; };
+		F2DB5D571EF6C9F4001F4D29 /* AssessmentRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentRun.swift; sourceTree = "<group>"; };
+		F2DB5D591EF6CC97001F4D29 /* AssessmentRunNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentRunNotification.swift; sourceTree = "<group>"; };
+		F2DB5D5C1EF6D452001F4D29 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		F2DB5D5E1EF6D5D1001F4D29 /* IndicatorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorTableViewController.swift; sourceTree = "<group>"; };
+		F2DB5D601EF6D669001F4D29 /* TemplatesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplatesListTableViewController.swift; sourceTree = "<group>"; };
+		F2DB5D641EF6DEB1001F4D29 /* RunsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunsListTableViewController.swift; sourceTree = "<group>"; };
 		F2E770521EF1E4520070B438 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		F2E770541EF1E8010070B438 /* DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		F2E770541EF1E8010070B438 /* DateUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		F2E770561EF1ED920070B438 /* AwsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwsUtil.swift; sourceTree = "<group>"; };
 		F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSV4Signer.swift; sourceTree = "<group>"; };
 		F2E7705A1EF1F4D20070B438 /* AWSInspectorDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AWSInspectorDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -89,9 +107,10 @@
 		F2CA25301EEF3094001E1628 /* AWSInspectorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F2DB5D5B1EF6D39A001F4D29 /* controller */,
+				F2DB5D4E1EF54789001F4D29 /* model */,
 				F2E770511EF1E43D0070B438 /* util */,
 				F2CA25311EEF3094001E1628 /* AppDelegate.swift */,
-				F2CA25331EEF3094001E1628 /* ViewController.swift */,
 				F2CA25351EEF3094001E1628 /* Main.storyboard */,
 				F2CA25381EEF3094001E1628 /* Assets.xcassets */,
 				F2CA253A1EEF3094001E1628 /* LaunchScreen.storyboard */,
@@ -101,14 +120,54 @@
 			path = AWSInspectorDemo;
 			sourceTree = "<group>";
 		};
+		F2DB5D4E1EF54789001F4D29 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB5D4F1EF547A8001F4D29 /* Arns.swift */,
+				F2DB5D531EF6BE72001F4D29 /* AssessmentTemplate.swift */,
+				F2DB5D551EF6C3C5001F4D29 /* UserAttributeForFindings.swift */,
+				F2DB5D571EF6C9F4001F4D29 /* AssessmentRun.swift */,
+				F2DB5D591EF6CC97001F4D29 /* AssessmentRunNotification.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		F2DB5D5B1EF6D39A001F4D29 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB5D631EF6DE95001F4D29 /* runs */,
+				F2DB5D621EF6D670001F4D29 /* templates */,
+				F2DB5D5C1EF6D452001F4D29 /* MainTableViewController.swift */,
+				F2DB5D5E1EF6D5D1001F4D29 /* IndicatorTableViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		F2DB5D621EF6D670001F4D29 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB5D601EF6D669001F4D29 /* TemplatesListTableViewController.swift */,
+			);
+			name = templates;
+			sourceTree = "<group>";
+		};
+		F2DB5D631EF6DE95001F4D29 /* runs */ = {
+			isa = PBXGroup;
+			children = (
+				F2DB5D641EF6DEB1001F4D29 /* RunsListTableViewController.swift */,
+			);
+			name = runs;
+			sourceTree = "<group>";
+		};
 		F2E770511EF1E43D0070B438 /* util */ = {
 			isa = PBXGroup;
 			children = (
 				F2E770521EF1E4520070B438 /* Credentials.swift */,
-				F2E770541EF1E8010070B438 /* DateFormat.swift */,
+				F2E770541EF1E8010070B438 /* DateUtil.swift */,
 				F2E770561EF1ED920070B438 /* AwsUtil.swift */,
 				F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */,
 				2C70D96F99628C1C8D57B097 /* RequestProcessor.swift */,
+				F2DB5D511EF54A19001F4D29 /* JSONUtil.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -238,11 +297,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E770531EF1E4520070B438 /* Credentials.swift in Sources */,
+				F2DB5D501EF547A8001F4D29 /* Arns.swift in Sources */,
 				F2E770591EF1F28A0070B438 /* AWSV4Signer.swift in Sources */,
-				F2CA25341EEF3094001E1628 /* ViewController.swift in Sources */,
+				F2DB5D611EF6D669001F4D29 /* TemplatesListTableViewController.swift in Sources */,
+				F2DB5D521EF54A19001F4D29 /* JSONUtil.swift in Sources */,
+				F2DB5D5A1EF6CC97001F4D29 /* AssessmentRunNotification.swift in Sources */,
+				F2DB5D5D1EF6D452001F4D29 /* MainTableViewController.swift in Sources */,
+				F2DB5D581EF6C9F4001F4D29 /* AssessmentRun.swift in Sources */,
+				F2DB5D5F1EF6D5D1001F4D29 /* IndicatorTableViewController.swift in Sources */,
 				F2E770571EF1ED920070B438 /* AwsUtil.swift in Sources */,
 				F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */,
-				F2E770551EF1E8010070B438 /* DateFormat.swift in Sources */,
+				F2DB5D561EF6C3C5001F4D29 /* UserAttributeForFindings.swift in Sources */,
+				F2DB5D651EF6DEB1001F4D29 /* RunsListTableViewController.swift in Sources */,
+				F2DB5D541EF6BE72001F4D29 /* AssessmentTemplate.swift in Sources */,
+				F2E770551EF1E8010070B438 /* DateUtil.swift in Sources */,
 				2C70D6A5A8431B099BB7DD16 /* RequestProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

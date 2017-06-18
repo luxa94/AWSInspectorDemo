@@ -33,3 +33,11 @@ class DateFormat {
     }
 
 }
+
+func nillableDate(for timestamp: Double?) -> Date? {
+    guard let date = timestamp else {
+        return nil
+    }
+
+    return Date(timeIntervalSince1970: date)
+}

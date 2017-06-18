@@ -9,12 +9,16 @@ import Alamofire
 enum AwsRequest: String {
     case listAssessmentRuns = "ListAssessmentRuns"
     case listAssessmentTemplates = "ListAssessmentTemplates"
+    case describeAssessmentRuns = "DescribeAssessmentRuns"
+    case describeAssessmentTemplates = "DescribeAssessmentTemplates"
 
 
     func method() -> HTTPMethod {
         switch self {
         case .listAssessmentRuns: return .post
         case .listAssessmentTemplates: return .post
+        case .describeAssessmentRuns: return .post
+        case .describeAssessmentTemplates: return .post
         }
     }
 }
