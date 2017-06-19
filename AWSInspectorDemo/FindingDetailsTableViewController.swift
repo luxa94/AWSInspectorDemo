@@ -22,7 +22,7 @@ class FindingDetailsTableViewController: IndicatorTableViewController {
     var userAttributes: [StringString] = []
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
 
         tableView.register(UINib(nibName: "BasicCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         tableView.register(UINib(nibName: "SubtitleCell", bundle: nil), forCellReuseIdentifier: "SubtitleCell")
