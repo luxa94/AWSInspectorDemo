@@ -11,6 +11,8 @@ import Alamofire
 
 class TemplateDetailsTableViewController: IndicatorTableViewController {
 
+    @IBOutlet weak var startRunButton: UIBarButtonItem!
+
     private static let DETAILS_SECTION = 0
     private static let RULE_ARNS_SECTION = 1
     private static let USER_ATTRIBUTES_SECTION = 2
@@ -49,13 +51,13 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
         guard let json = response.result.value as? [String: AnyObject],
             let templatesJSON = json["assessmentTemplates"] as? [[String: AnyObject]]
             else {
-                print("fuck")
+                showSimpleAlertWithTitle(message: "Unable to fetch selected template.", viewController: self)
                 return
         }
 
         let templates = AssessmentTemplate.parseJSONToArray(templatesJSON)
         guard !templates.isEmpty else {
-            print("empty fuck")
+            showSimpleAlertWithTitle(message: "Unable to deserialize selected template.", viewController: self)
             return
         }
 
@@ -63,6 +65,8 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
         self.template = template
         rulePackageArns = template.rulesPackageArns
         userAttributesForFindings = template.userAttributesForFindings
+
+        startRunButton.isEnabled = true
 
         tableView.reloadData()
     }
@@ -166,6 +170,28 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
         default:
             return nil
         }
+    }
+
+    @IBAction func startRun(_ sender: Any) {
+        guard let arn = templateArn else {
+            showSimpleAlertWithTitle(message: "Unable to send run request.", viewController: self)
+            return
+        }
+
+        let parameters = ["assessmentTemplateArn": arn]
+        requestProcessor.sendRequest(request: .startAssessmentRun, parameters: parameters)
+            .responseJSON(completionHandler: startRunHandler)
+    }
+
+    func startRunHandler(response: DataResponse<Any>) {
+        guard let json = response.result.value as? [String: AnyObject],
+            let runArn = json["assessmentRunArn"] as? String
+            else {
+                showSimpleAlertWithTitle(message: "Unable to start run.", viewController: self)
+                return
+        }
+
+        showSimpleAlertWithTitle(message: "Run with arn \(runArn) started.", viewController: self)
     }
 
 }

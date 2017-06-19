@@ -14,6 +14,7 @@
 		F2777B3D1EF834AF00C1FBB7 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2777B3C1EF834AF00C1FBB7 /* NotificationTableViewCell.xib */; };
 		F2777B3F1EF8353300C1FBB7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B3E1EF8353300C1FBB7 /* NotificationTableViewCell.swift */; };
 		F2777B411EF836D000C1FBB7 /* RunDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B401EF836D000C1FBB7 /* RunDetailsTableViewController.swift */; };
+		F2777B431EF85E7200C1FBB7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B421EF85E7200C1FBB7 /* Util.swift */; };
 		F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25311EEF3094001E1628 /* AppDelegate.swift */; };
 		F2CA25371EEF3094001E1628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25351EEF3094001E1628 /* Main.storyboard */; };
 		F2CA25391EEF3094001E1628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25381EEF3094001E1628 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		F2777B3C1EF834AF00C1FBB7 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		F2777B3E1EF8353300C1FBB7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		F2777B401EF836D000C1FBB7 /* RunDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailsTableViewController.swift; sourceTree = "<group>"; };
+		F2777B421EF85E7200C1FBB7 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSInspectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CA25311EEF3094001E1628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2CA25361EEF3094001E1628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				F2E770581EF1F28A0070B438 /* AWSV4Signer.swift */,
 				2C70D96F99628C1C8D57B097 /* RequestProcessor.swift */,
 				F2DB5D511EF54A19001F4D29 /* JSONUtil.swift */,
+				F2777B421EF85E7200C1FBB7 /* Util.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				F2DB5D611EF6D669001F4D29 /* TemplatesListTableViewController.swift in Sources */,
 				F2DB5D521EF54A19001F4D29 /* JSONUtil.swift in Sources */,
 				F2DB5D5A1EF6CC97001F4D29 /* AssessmentRunNotification.swift in Sources */,
+				F2777B431EF85E7200C1FBB7 /* Util.swift in Sources */,
 				F2DB5D5D1EF6D452001F4D29 /* MainTableViewController.swift in Sources */,
 				F2DB5D671EF6E3AA001F4D29 /* TemplateDetailsTableViewController.swift in Sources */,
 				F2777B411EF836D000C1FBB7 /* RunDetailsTableViewController.swift in Sources */,

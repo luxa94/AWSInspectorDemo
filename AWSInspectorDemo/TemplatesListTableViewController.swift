@@ -40,7 +40,7 @@ class TemplatesListTableViewController: IndicatorTableViewController {
         hideIndicator()
         guard let json = response.result.value as? [String: AnyObject],
             let arns = Arns.fromJSONDictionary(json, jsonName: TemplatesListTableViewController.ARNS_PROPERTY) else {
-                print("fuck")
+                showSimpleAlertWithTitle(message: "Unable to fetch templates.", viewController: self)
                 reload([])
                 return
         }

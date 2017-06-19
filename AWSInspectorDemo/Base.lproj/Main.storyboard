@@ -126,6 +126,18 @@
                             <outlet property="delegate" destination="uak-hM-eYQ" id="0nK-lr-lwK"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zIj-yg-sC2">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Run" id="aOQ-fL-5hS">
+                            <connections>
+                                <action selector="startRun:" destination="uak-hM-eYQ" id="3NZ-WZ-FDA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="startRunButton" destination="aOQ-fL-5hS" id="3gF-XZ-fqp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbG-Vn-Gbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

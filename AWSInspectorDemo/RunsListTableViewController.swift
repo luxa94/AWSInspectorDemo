@@ -38,7 +38,7 @@ class RunsListTableViewController: IndicatorTableViewController {
         hideIndicator()
         guard let json = response.result.value as? [String: AnyObject],
             let arns = Arns.fromJSONDictionary(json, jsonName: "assessmentRunArns") else {
-                print("fuck")
+                showSimpleAlertWithTitle(message: "Unable to fetch runs.", viewController: self)
                 reload([])
                 return
         }

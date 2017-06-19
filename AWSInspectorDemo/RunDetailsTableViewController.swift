@@ -57,13 +57,13 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         guard let json = response.result.value as? [String: AnyObject],
             let templatesJSON = json["assessmentRuns"] as? [[String: AnyObject]]
             else {
-                print("fuck")
+                showSimpleAlertWithTitle(message: "Unable to fetch selected runs.", viewController: self)
                 return
         }
 
         let runs = AssessmentRun.parseJSONToArray(templatesJSON)
         guard !runs.isEmpty else {
-            print("empty fuck")
+            showSimpleAlertWithTitle(message: "Unable to deserialize selected run.", viewController: self)
             return
         }
 
