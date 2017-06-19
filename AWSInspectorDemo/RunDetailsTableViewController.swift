@@ -21,6 +21,7 @@ class RunDetailsTableViewController: IndicatorTableViewController {
     private static let USER_ATTRIBUTES_SECTION = 5
 
     private static let TELEMETRY_ROW = 0
+    private static let FINDINGS_ROW = 1
 
     let requestProcessor = RequestProcessor()
 
@@ -91,7 +92,7 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         case RunDetailsTableViewController.DETAILS_SECTION:
             return run != nil ? 10 : 0
         case RunDetailsTableViewController.ACTIONS_SECTION:
-            return run != nil ? 1 : 0
+            return run != nil ? 2 : 0
         case RunDetailsTableViewController.FINDINGS_SECTION:
             return findingCounts.count
         case RunDetailsTableViewController.NOTIFICATIONS_SECTION:
@@ -111,8 +112,10 @@ class RunDetailsTableViewController: IndicatorTableViewController {
 
             if indexPath.row == RunDetailsTableViewController.TELEMETRY_ROW {
                 cell.textLabel?.text = "Telemetry"
+            } else if indexPath.row == RunDetailsTableViewController.FINDINGS_ROW {
+                cell.textLabel?.text = "Findings"
             }
-            
+
             return cell
         }
         else if indexPath.section == RunDetailsTableViewController.FINDINGS_SECTION {
@@ -167,6 +170,8 @@ class RunDetailsTableViewController: IndicatorTableViewController {
 
         if indexPath.row == RunDetailsTableViewController.TELEMETRY_ROW {
             showRunTelemetry()
+        } else if indexPath.row == RunDetailsTableViewController.FINDINGS_ROW {
+            showRunFindings()
         }
     }
 
@@ -177,6 +182,15 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         }
 
         performSegue(withIdentifier: "showTelemetry", sender: nil)
+    }
+
+    func showRunFindings() {
+        guard runArn != nil else {
+            showSimpleAlertWithTitle(message: "No run arn to fetch findings for.", viewController: self)
+            return
+        }
+
+        performSegue(withIdentifier: "showFindings", sender: nil)
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -263,6 +277,11 @@ class RunDetailsTableViewController: IndicatorTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTelemetry" {
             if let vc = segue.destination as? TelemetryTableViewController {
+                vc.runArn = runArn
+            }
+        }
+        else if segue.identifier == "showFindings" {
+            if let vc = segue.destination as? FindingsListTableViewController {
                 vc.runArn = runArn
             }
         }

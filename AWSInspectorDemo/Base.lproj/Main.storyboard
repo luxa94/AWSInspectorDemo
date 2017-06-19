@@ -159,6 +159,7 @@
                     </tableView>
                     <connections>
                         <segue destination="I5E-4d-s0P" kind="show" identifier="showTelemetry" id="5T5-8g-tY4"/>
+                        <segue destination="fVY-UL-hTJ" kind="show" identifier="showFindings" id="ipJ-7R-PRA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeX-h4-6Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,6 +183,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmI-9o-aJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4926" y="308"/>
+        </scene>
+        <!--Findings List Table View Controller-->
+        <scene sceneID="zpG-qk-wRI">
+            <objects>
+                <tableViewController id="fVY-UL-hTJ" customClass="FindingsListTableViewController" customModule="AWSInspectorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="akB-UI-GeW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FindingCell" textLabel="6VY-At-ctv" style="IBUITableViewCellStyleDefault" id="bxw-hC-5Zb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bxw-hC-5Zb" id="fhQ-s7-vcE">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6VY-At-ctv">
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fVY-UL-hTJ" id="CJD-7w-ybz"/>
+                            <outlet property="delegate" destination="fVY-UL-hTJ" id="kcP-gM-YRs"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="JTi-lu-9Bw" kind="show" identifier="showFindingDetails" id="hXD-sI-5kw"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSJ-Da-iqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4926" y="1135"/>
+        </scene>
+        <!--Finding Details Table View Controller-->
+        <scene sceneID="54G-Da-0Bb">
+            <objects>
+                <tableViewController id="JTi-lu-9Bw" customClass="FindingDetailsTableViewController" customModule="AWSInspectorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="SLV-yn-E6U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="diU-gm-0Hw">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diU-gm-0Hw" id="EU5-Bd-TiF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JTi-lu-9Bw" id="F98-g4-2Y5"/>
+                            <outlet property="delegate" destination="JTi-lu-9Bw" id="Vve-5g-mAg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8PU-Mg-SiR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6102" y="1135"/>
         </scene>
         <!--Runs List Table View Controller-->
         <scene sceneID="CUh-Bz-weQ">

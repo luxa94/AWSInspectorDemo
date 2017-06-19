@@ -13,6 +13,8 @@ enum AwsRequest: String {
     case describeAssessmentTemplates = "DescribeAssessmentTemplates"
     case startAssessmentRun = "StartAssessmentRun"
     case getTelemetryMetadata = "GetTelemetryMetadata"
+    case listFindings = "ListFindings"
+    case describeFindings = "DescribeFindings"
 
 
     func method() -> HTTPMethod {
@@ -23,6 +25,8 @@ enum AwsRequest: String {
         case .describeAssessmentTemplates: return .post
         case .startAssessmentRun: return .post
         case .getTelemetryMetadata: return .post
+        case .listFindings: return .post
+        case .describeFindings: return .post
         }
     }
 }

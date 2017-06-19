@@ -31,8 +31,6 @@ class AWSV4Signer {
         return headers
     }
 
-    // MARK: Utilities
-
     private func pathForURL(url: NSURL) -> String {
         var path = url.path
         if (path ?? "").isEmpty {
@@ -51,8 +49,6 @@ class AWSV4Signer {
 
         return hex
     }
-
-    // MARK: Methods Ported from AWS SDK
 
     private func authorization(url: NSURL, headers: Dictionary<String, String>, datetime: DateTuple, httpMethod: String, bodyDigest: String) -> String {
         let cred = credential(datetime: datetime)
