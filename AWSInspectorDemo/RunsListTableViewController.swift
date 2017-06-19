@@ -72,11 +72,15 @@ class RunsListTableViewController: IndicatorTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "", sender: arns[indexPath.row])
+        performSegue(withIdentifier: "showRunDetails", sender: arns[indexPath.row])
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if segue.identifier == "showRunDetails" {
+            if let vc = segue.destination as? RunDetailsTableViewController {
+                vc.runArn = sender as? String
+            }
+        }
     }
 
 }

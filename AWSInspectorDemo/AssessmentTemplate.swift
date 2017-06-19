@@ -16,16 +16,6 @@ struct AssessmentTemplate {
     let name: String
     let rulesPackageArns: [String]
     let userAttributesForFindings: [UserAttributeForFindings]
-
-//    init(arn: String, assessmentTargetArn: String, createdAt: Date, durationInSeconds: Int, name: String, rulesPackageArns: [String], userAttributesForFindings: [UserAttributeForFindings]) {
-//        self.arn = arn
-//        self.assessmentTargetArn = assessmentTargetArn
-//        self.createdAt = createdAt
-//        self.durationInSeconds = durationInSeconds
-//        self.name = name
-//        self.rulesPackageArns = rulesPackageArns
-//        self.userAttributesForFindings = userAttributesForFindings
-//    }
 }
 
 extension AssessmentTemplate: JSONConvertible {

@@ -8,22 +8,23 @@
 
 import Foundation
 
+typealias StringInt = (string: String, int: Int)
+
 struct AssessmentRun {
     let arn: String
+    let name: String
     let assessmentTemplateArn: String
     let completedAt: Date?
     let createdAt: Date
     let dataCollected: Bool
     let durationInSeconds: Int
-    let findingCounts: [String: Int]
-    let name: String
+    let findingCounts: [StringInt]
     let notifications: [AssessmentRunNotification]
     let rulesPackageArns: [String]
     let startedAt: Date?
     let state: String
     let stateChangedAt: Date
     let userAttributesForFindings: [UserAttributeForFindings]
-
 }
 
 extension AssessmentRun: JSONConvertible {
@@ -33,7 +34,7 @@ extension AssessmentRun: JSONConvertible {
             let createdAtTimestamp = json["createdAt"] as? Double,
             let dataCollected = json["dataCollected"] as? Bool,
             let durationInSeconds = json["durationInSeconds"] as? Int,
-            let findingCounts = json["findingCounts"] as? [String: Int],
+            let findingCountsJSON = json["findingCounts"] as? [String: Int],
             let name = json["name"] as? String,
             let notificationsJSON = json["notifications"] as? [[String: AnyObject]],
             let rulesPackageArns = json["rulesPackageArns"] as? [String],
@@ -56,6 +57,10 @@ extension AssessmentRun: JSONConvertible {
         let notifications = AssessmentRunNotification.parseJSONToArray(notificationsJSON)
         let userAttributesForFindings = UserAttributeForFindings.parseJSONToArray(userAttributesJSON)
 
-        return AssessmentRun(arn: arn, assessmentTemplateArn: assessmentTemplateArn, completedAt: completedAt, createdAt: createdAt, dataCollected: dataCollected, durationInSeconds: durationInSeconds, findingCounts: findingCounts, name: name, notifications: notifications, rulesPackageArns: rulesPackageArns, startedAt: startedAt, state: state, stateChangedAt: stateChangedAt, userAttributesForFindings: userAttributesForFindings)
+        let findingCounts = findingCountsJSON.flatMap { (param: (key: String, value: Int)) -> StringInt in
+            return (string: param.key, int: param.value)
+        }
+
+        return AssessmentRun(arn: arn, name: name, assessmentTemplateArn: assessmentTemplateArn, completedAt: completedAt, createdAt: createdAt, dataCollected: dataCollected, durationInSeconds: durationInSeconds, findingCounts: findingCounts, notifications: notifications, rulesPackageArns: rulesPackageArns, startedAt: startedAt, state: state, stateChangedAt: stateChangedAt, userAttributesForFindings: userAttributesForFindings)
     }
 }

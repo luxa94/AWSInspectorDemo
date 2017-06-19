@@ -11,6 +11,8 @@ import Alamofire
 
 class TemplatesListTableViewController: IndicatorTableViewController {
 
+    private static let ARNS_PROPERTY = "assessmentTemplateArns"
+
     var arns: [String] = []
     var requestProcessor = RequestProcessor()
 
@@ -37,7 +39,7 @@ class TemplatesListTableViewController: IndicatorTableViewController {
     func templatesFetched(response: DataResponse<Any>) {
         hideIndicator()
         guard let json = response.result.value as? [String: AnyObject],
-            let arns = Arns.fromJSONDictionary(json, jsonName: "assessmentTemplateArns") else {
+            let arns = Arns.fromJSONDictionary(json, jsonName: TemplatesListTableViewController.ARNS_PROPERTY) else {
                 print("fuck")
                 reload([])
                 return
@@ -73,11 +75,15 @@ class TemplatesListTableViewController: IndicatorTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "", sender: arns[indexPath.row])
+        performSegue(withIdentifier: "showTemplateDetails", sender: arns[indexPath.row])
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "showTemplateDetails" {
+            if let vc = segue.destination as? TemplateDetailsTableViewController {
+                vc.templateArn = sender as? String
+            }
+        }
     }
 
 }

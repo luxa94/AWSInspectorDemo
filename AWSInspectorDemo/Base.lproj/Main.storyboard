@@ -104,10 +104,51 @@
                             <outlet property="delegate" destination="MDu-rO-SZi" id="FdM-1q-ITq"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="uak-hM-eYQ" kind="show" identifier="showTemplateDetails" id="SRV-bV-xge"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCy-0j-Xrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1690" y="-264"/>
+        </scene>
+        <!--Template Details Table View Controller-->
+        <scene sceneID="xRD-dC-KWR">
+            <objects>
+                <tableViewController id="uak-hM-eYQ" customClass="TemplateDetailsTableViewController" customModule="AWSInspectorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="AKA-Xa-LEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="uak-hM-eYQ" id="EfS-QG-0ye"/>
+                            <outlet property="delegate" destination="uak-hM-eYQ" id="0nK-lr-lwK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbG-Vn-Gbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3204" y="-264"/>
+        </scene>
+        <!--Run Details Table View Controller-->
+        <scene sceneID="jsf-SU-teH">
+            <objects>
+                <tableViewController id="MAo-th-33B" customClass="RunDetailsTableViewController" customModule="AWSInspectorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="cii-8E-FvO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="MAo-th-33B" id="3vq-fl-iDl"/>
+                            <outlet property="delegate" destination="MAo-th-33B" id="Dzw-Ku-Fun"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeX-h4-6Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3182" y="519"/>
         </scene>
         <!--Runs List Table View Controller-->
         <scene sceneID="CUh-Bz-weQ">
@@ -141,6 +182,9 @@
                             <outlet property="delegate" destination="qVC-N7-j3E" id="Pv5-Wk-MhP"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="MAo-th-33B" kind="show" identifier="showRunDetails" id="eW1-pa-TAs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGl-FT-m1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

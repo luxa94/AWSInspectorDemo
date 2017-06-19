@@ -41,3 +41,16 @@ func nillableDate(for timestamp: Double?) -> Date? {
 
     return Date(timeIntervalSince1970: date)
 }
+
+class MediumDateFormatter {
+    private static let formatter = { () -> DateFormatter in 
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .medium
+        return f
+    } ()
+
+    static func format(_ date: Date) -> String {
+        return formatter.string(from: date)
+    }
+}
