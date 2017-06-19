@@ -20,13 +20,6 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
     var rulePackageArns: [String] = []
     var userAttributesForFindings: [UserAttributeForFindings] = []
 
-    @IBOutlet weak var arnCell: UITableViewCell!
-    @IBOutlet weak var templateNameCell: UITableViewCell!
-    @IBOutlet weak var assessmentTagetCell: UITableViewCell!
-    @IBOutlet weak var createdAtCell: UITableViewCell!
-    @IBOutlet weak var durationCell: UITableViewCell!
-
-
     override func viewDidLoad() {
         tableView.register(UINib(nibName: "BasicCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         tableView.register(UINib(nibName: "SubtitleCell", bundle: nil), forCellReuseIdentifier: "SubtitleCell")

@@ -19,17 +19,6 @@ class RunDetailsTableViewController: IndicatorTableViewController {
     private static let RULE_ARNS_SECTION = 3
     private static let USER_ATTRIBUTES_SECTION = 4
 
-    @IBOutlet weak var arnCell: UITableViewCell!
-    @IBOutlet weak var nameCell: UITableViewCell!
-    @IBOutlet weak var templateArnCell: UITableViewCell!
-    @IBOutlet weak var completedAtCell: UITableViewCell!
-    @IBOutlet weak var createdAtCell: UITableViewCell!
-    @IBOutlet weak var dataCollectedCell: UITableViewCell!
-    @IBOutlet weak var durationCell: UITableViewCell!
-    @IBOutlet weak var startedAtCell: UITableViewCell!
-    @IBOutlet weak var stateCell: UITableViewCell!
-    @IBOutlet weak var stateChangedAtCell: UITableViewCell!
-
     let requestProcessor = RequestProcessor()
 
     var runArn: String?
