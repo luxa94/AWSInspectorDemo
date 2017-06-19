@@ -157,10 +157,31 @@
                             <outlet property="delegate" destination="MAo-th-33B" id="Dzw-Ku-Fun"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="I5E-4d-s0P" kind="show" identifier="showTelemetry" id="5T5-8g-tY4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeX-h4-6Po" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3182" y="519"/>
+        </scene>
+        <!--Telemetry Table View Controller-->
+        <scene sceneID="EsM-eh-Y50">
+            <objects>
+                <tableViewController id="I5E-4d-s0P" customClass="TelemetryTableViewController" customModule="AWSInspectorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZhI-P1-CKf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="I5E-4d-s0P" id="vrK-pP-hdq"/>
+                            <outlet property="delegate" destination="I5E-4d-s0P" id="XUX-9O-VuG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmI-9o-aJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4926" y="308"/>
         </scene>
         <!--Runs List Table View Controller-->
         <scene sceneID="CUh-Bz-weQ">

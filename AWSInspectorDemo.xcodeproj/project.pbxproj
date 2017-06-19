@@ -15,6 +15,11 @@
 		F2777B3F1EF8353300C1FBB7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B3E1EF8353300C1FBB7 /* NotificationTableViewCell.swift */; };
 		F2777B411EF836D000C1FBB7 /* RunDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B401EF836D000C1FBB7 /* RunDetailsTableViewController.swift */; };
 		F2777B431EF85E7200C1FBB7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B421EF85E7200C1FBB7 /* Util.swift */; };
+		F2777B451EF8700700C1FBB7 /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2777B441EF8700700C1FBB7 /* ActionCell.xib */; };
+		F2777B471EF8710B00C1FBB7 /* Telemetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B461EF8710B00C1FBB7 /* Telemetry.swift */; };
+		F2777B4B1EF871F900C1FBB7 /* TelemetryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B491EF871F900C1FBB7 /* TelemetryTableViewCell.swift */; };
+		F2777B4C1EF871F900C1FBB7 /* TelemetryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2777B4A1EF871F900C1FBB7 /* TelemetryTableViewCell.xib */; };
+		F2777B4E1EF8735300C1FBB7 /* TelemetryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2777B4D1EF8735300C1FBB7 /* TelemetryTableViewController.swift */; };
 		F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CA25311EEF3094001E1628 /* AppDelegate.swift */; };
 		F2CA25371EEF3094001E1628 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25351EEF3094001E1628 /* Main.storyboard */; };
 		F2CA25391EEF3094001E1628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CA25381EEF3094001E1628 /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 		F2777B3E1EF8353300C1FBB7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		F2777B401EF836D000C1FBB7 /* RunDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailsTableViewController.swift; sourceTree = "<group>"; };
 		F2777B421EF85E7200C1FBB7 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F2777B441EF8700700C1FBB7 /* ActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
+		F2777B461EF8710B00C1FBB7 /* Telemetry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Telemetry.swift; sourceTree = "<group>"; };
+		F2777B491EF871F900C1FBB7 /* TelemetryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelemetryTableViewCell.swift; sourceTree = "<group>"; };
+		F2777B4A1EF871F900C1FBB7 /* TelemetryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelemetryTableViewCell.xib; sourceTree = "<group>"; };
+		F2777B4D1EF8735300C1FBB7 /* TelemetryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelemetryTableViewController.swift; sourceTree = "<group>"; };
 		F2CA252E1EEF3094001E1628 /* AWSInspectorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSInspectorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CA25311EEF3094001E1628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2CA25361EEF3094001E1628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 			children = (
 				F2777B371EF831B700C1FBB7 /* xib */,
 				F2777B3E1EF8353300C1FBB7 /* NotificationTableViewCell.swift */,
+				F2777B491EF871F900C1FBB7 /* TelemetryTableViewCell.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -112,11 +123,21 @@
 		F2777B371EF831B700C1FBB7 /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				F2777B441EF8700700C1FBB7 /* ActionCell.xib */,
 				F2777B381EF831C200C1FBB7 /* BasicCell.xib */,
 				F2777B3A1EF831F400C1FBB7 /* SubtitleCell.xib */,
 				F2777B3C1EF834AF00C1FBB7 /* NotificationTableViewCell.xib */,
+				F2777B4A1EF871F900C1FBB7 /* TelemetryTableViewCell.xib */,
 			);
 			name = xib;
+			sourceTree = "<group>";
+		};
+		F2777B481EF871C900C1FBB7 /* telemetry */ = {
+			isa = PBXGroup;
+			children = (
+				F2777B4D1EF8735300C1FBB7 /* TelemetryTableViewController.swift */,
+			);
+			name = telemetry;
 			sourceTree = "<group>";
 		};
 		F2CA25251EEF3094001E1628 = {
@@ -162,6 +183,7 @@
 				F2DB5D551EF6C3C5001F4D29 /* UserAttributeForFindings.swift */,
 				F2DB5D571EF6C9F4001F4D29 /* AssessmentRun.swift */,
 				F2DB5D591EF6CC97001F4D29 /* AssessmentRunNotification.swift */,
+				F2777B461EF8710B00C1FBB7 /* Telemetry.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -169,6 +191,7 @@
 		F2DB5D5B1EF6D39A001F4D29 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				F2777B481EF871C900C1FBB7 /* telemetry */,
 				F2DB5D631EF6DE95001F4D29 /* runs */,
 				F2DB5D621EF6D670001F4D29 /* templates */,
 				F2DB5D5C1EF6D452001F4D29 /* MainTableViewController.swift */,
@@ -273,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2777B391EF831C200C1FBB7 /* BasicCell.xib in Resources */,
+				F2777B4C1EF871F900C1FBB7 /* TelemetryTableViewCell.xib in Resources */,
 				F2CA253C1EEF3094001E1628 /* LaunchScreen.storyboard in Resources */,
+				F2777B451EF8700700C1FBB7 /* ActionCell.xib in Resources */,
 				F2777B3D1EF834AF00C1FBB7 /* NotificationTableViewCell.xib in Resources */,
 				F2CA25391EEF3094001E1628 /* Assets.xcassets in Resources */,
 				F2777B3B1EF831F400C1FBB7 /* SubtitleCell.xib in Resources */,
@@ -349,13 +374,16 @@
 				F2777B411EF836D000C1FBB7 /* RunDetailsTableViewController.swift in Sources */,
 				F2DB5D581EF6C9F4001F4D29 /* AssessmentRun.swift in Sources */,
 				F2DB5D5F1EF6D5D1001F4D29 /* IndicatorTableViewController.swift in Sources */,
+				F2777B471EF8710B00C1FBB7 /* Telemetry.swift in Sources */,
 				F2E770571EF1ED920070B438 /* AwsUtil.swift in Sources */,
 				F2CA25321EEF3094001E1628 /* AppDelegate.swift in Sources */,
 				F2DB5D561EF6C3C5001F4D29 /* UserAttributeForFindings.swift in Sources */,
 				F2DB5D651EF6DEB1001F4D29 /* RunsListTableViewController.swift in Sources */,
 				F2DB5D541EF6BE72001F4D29 /* AssessmentTemplate.swift in Sources */,
+				F2777B4E1EF8735300C1FBB7 /* TelemetryTableViewController.swift in Sources */,
 				F2E770551EF1E8010070B438 /* DateUtil.swift in Sources */,
 				2C70D6A5A8431B099BB7DD16 /* RequestProcessor.swift in Sources */,
+				F2777B4B1EF871F900C1FBB7 /* TelemetryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

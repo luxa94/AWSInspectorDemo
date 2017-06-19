@@ -14,10 +14,13 @@ class RunDetailsTableViewController: IndicatorTableViewController {
     private static let ARNS_PROPERTY = "assessmentRunArns"
 
     private static let DETAILS_SECTION = 0
-    private static let FINDINGS_SECTION = 1
-    private static let NOTIFICATIONS_SECTION = 2
-    private static let RULE_ARNS_SECTION = 3
-    private static let USER_ATTRIBUTES_SECTION = 4
+    private static let ACTIONS_SECTION = 1
+    private static let FINDINGS_SECTION = 2
+    private static let NOTIFICATIONS_SECTION = 3
+    private static let RULE_ARNS_SECTION = 4
+    private static let USER_ATTRIBUTES_SECTION = 5
+
+    private static let TELEMETRY_ROW = 0
 
     let requestProcessor = RequestProcessor()
 
@@ -35,6 +38,7 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         tableView.register(UINib(nibName: "BasicCell", bundle: nil), forCellReuseIdentifier: "BasicCell")
         tableView.register(UINib(nibName: "SubtitleCell", bundle: nil), forCellReuseIdentifier: "SubtitleCell")
         tableView.register(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationTableViewCell")
+        tableView.register(UINib(nibName: "ActionCell", bundle: nil), forCellReuseIdentifier: "ActionCell")
 
         tableView.estimatedRowHeight = 60
     }
@@ -86,6 +90,8 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         switch section {
         case RunDetailsTableViewController.DETAILS_SECTION:
             return run != nil ? 10 : 0
+        case RunDetailsTableViewController.ACTIONS_SECTION:
+            return run != nil ? 1 : 0
         case RunDetailsTableViewController.FINDINGS_SECTION:
             return findingCounts.count
         case RunDetailsTableViewController.NOTIFICATIONS_SECTION:
@@ -100,7 +106,16 @@ class RunDetailsTableViewController: IndicatorTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == RunDetailsTableViewController.FINDINGS_SECTION {
+        if indexPath.section == RunDetailsTableViewController.ACTIONS_SECTION {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath)
+
+            if indexPath.row == RunDetailsTableViewController.TELEMETRY_ROW {
+                cell.textLabel?.text = "Telemetry"
+            }
+            
+            return cell
+        }
+        else if indexPath.section == RunDetailsTableViewController.FINDINGS_SECTION {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleCell", for: indexPath)
 
             let findingCount = findingCounts[indexPath.row]
@@ -145,6 +160,25 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == RunDetailsTableViewController.ACTIONS_SECTION else {
+            return
+        }
+
+        if indexPath.row == RunDetailsTableViewController.TELEMETRY_ROW {
+            showRunTelemetry()
+        }
+    }
+
+    func showRunTelemetry() {
+        guard runArn != nil else {
+            showSimpleAlertWithTitle(message: "No run arn to fetch telemetry for.", viewController: self)
+            return
+        }
+
+        performSegue(withIdentifier: "showTelemetry", sender: nil)
+    }
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -153,6 +187,8 @@ class RunDetailsTableViewController: IndicatorTableViewController {
         switch section {
         case RunDetailsTableViewController.DETAILS_SECTION:
             return "Details"
+        case RunDetailsTableViewController.ACTIONS_SECTION:
+            return "Actions"
         case RunDetailsTableViewController.FINDINGS_SECTION:
             return "Finding counts"
         case RunDetailsTableViewController.NOTIFICATIONS_SECTION:
@@ -221,6 +257,14 @@ class RunDetailsTableViewController: IndicatorTableViewController {
             return MediumDateFormatter.format(run.stateChangedAt)
         default:
             return nil
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTelemetry" {
+            if let vc = segue.destination as? TelemetryTableViewController {
+                vc.runArn = runArn
+            }
         }
     }
 
