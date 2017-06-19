@@ -11,6 +11,10 @@ import Alamofire
 
 class TemplateDetailsTableViewController: IndicatorTableViewController {
 
+    private static let DETAILS_SECTION = 0
+    private static let RULE_ARNS_SECTION = 1
+    private static let USER_ATTRIBUTES_SECTION = 2
+
     private static let ARNS_PROPERTY = "assessmentTemplateArns"
 
     var templateArn: String?
@@ -69,11 +73,11 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0:
+        case TemplateDetailsTableViewController.DETAILS_SECTION:
             return template != nil ? 5 : 0
-        case 1:
+        case TemplateDetailsTableViewController.RULE_ARNS_SECTION:
             return rulePackageArns.count
-        case 2:
+        case TemplateDetailsTableViewController.USER_ATTRIBUTES_SECTION:
             return userAttributesForFindings.count
         default:
             return super.tableView(tableView, numberOfRowsInSection: section)
@@ -81,7 +85,7 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 1 {
+        if indexPath.section == TemplateDetailsTableViewController.RULE_ARNS_SECTION {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath)
 
             let packageArn = rulePackageArns[indexPath.row]
@@ -89,7 +93,7 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
 
             return cell
         }
-        else if indexPath.section == 1 {
+        else if indexPath.section == TemplateDetailsTableViewController.USER_ATTRIBUTES_SECTION {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleCell", for: indexPath)
 
             let userAttribute = userAttributesForFindings[indexPath.row]
@@ -115,11 +119,11 @@ class TemplateDetailsTableViewController: IndicatorTableViewController {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0:
+        case TemplateDetailsTableViewController.DETAILS_SECTION:
             return "Details"
-        case 1:
+        case TemplateDetailsTableViewController.RULE_ARNS_SECTION:
             return "Rule package arns"
-        case 2:
+        case TemplateDetailsTableViewController.USER_ATTRIBUTES_SECTION:
             return "User attributes for findings"
         default:
             return nil
